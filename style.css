@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap');
+
+html {
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+}
+
+body>* {
+  padding: 1rem;
+}
+
+body {
+  grid-template-columns: auto;
+  grid-template-rows: 2px auto auto 110px auto auto auto auto auto auto;
+  display: grid;
+  grid-template-areas:
+    'nav2'
+    'nav'
+    'header2'
+    'header'
+    'service'
+    'service2'
+    'portfolio'
+    'portfolio2'
+    'about'
+    'footer';
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  body>* {
+    padding: 1.7rem;
+  }
+
+  body {
+    grid-template-columns: auto auto;
+    grid-template-rows: 10px auto auto 120px 100px auto auto auto auto auto;
+    grid-template-areas:
+      'nav2 nav2'
+      'nav nav'
+      'header2 header'
+      'header header'
+      'service service'
+      'service2 service2'
+      'portfolio portfolio'
+      'portfolio2 portfolio2'
+      'about about'
+      'footer footer';
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 25px;
+  }
+
+  body>* {
+    padding: 3rem;
+  }
+
+  body {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 10vh 89.5vh 100vh auto auto 65vh;
+    grid-template-areas:
+      'nav2 nav2 nav'
+      'header2 header2 header'
+      'service service2 service2'
+      'portfolio portfolio2 portfolio2'
+      'about about about'
+      'footer footer footer';
+  }
+}
+
+/* background video*/
+video {
+  position: fixed; 
+  z-index: -100;
+  background-size: cover;
+  padding: 0;
+}
+
+/* area - spacer */
+.item-spacer {
+  grid-area: nav2;
+  background-color: #000;
+  padding: 1rem;
+
+}
+
+/* area - nav*/
+.item-menu {
+  grid-area: nav;
+  font-family: Roboto, sans-serif;
+  background-color: #000;
+  padding: 1rem;
+
+}
+
+.menu {
+  display: flex;
+  font-size: .6rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  justify-content: space-around;
+}
+
+/* area - marketing meets development slogan */
+.item-slogan {
+  grid-area: header;
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: .5rem;
+
+}
+
+.slogan {
+  border-left: #000 solid 1px;
+  padding: .5em;
+
+}
+
+/* area - intros */
+.item-introduction {
+  grid-area: header2;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+
+.intro {
+  font-size: 2.3rem;
+  font-weight: 700;
+  font-family: Poppins, sans-serif;
+  border-bottom: 1px #000 solid;
+}
+
+.sub-intro {
+  color: #000;
+  font-size: .9rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  margin-top: 1%;
+}
+
+.sub-intro:hover {
+  background-color: #FDDDA0;
+}
+.item-introduction a:link, .item-introduction a:visited {
+  color: #000;
+}
+
+/* area - service title */
+.item-services {
+  grid-area: service;
+  background-color: #C425C7;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+
+/* area - service items */
+.item-services-breakdown {
+  grid-area: service2;
+  background-color: #C425C7;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.services-main {
+  font-family: Poppins, sans-serif;
+  border-top: #fff solid 1px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.services-content {
+  font-family: Roboto, sans-serif;
+  font-size: .8rem;
+}
+
+/* area - port title */
+.item-portfolio {
+  grid-area: portfolio;
+  background-color: #478FFE;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 0;
+
+}
+
+/* area - port items */
+.item-portfolio-breakdown {
+  grid-area: portfolio2;
+  background-color: #478FFE;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.port-main {
+  border-top: #fff solid 1px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
+
+}
+
+.port-content {
+  font-size: .8rem;
+  font-family: Roboto, sans-serif;
+
+}
+
+/* area - about */
+.item-about-me {
+  grid-area: about;
+  background-color: #e0e2ee;
+  color: #4D0DCF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+
+}
+
+.about-header {
+  font-size: 2.3rem;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about-intro {
+  border-top: #4D0DCF solid 1px;
+  font-family: Roboto, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding-bottom: .5rem;
+
+}
+
+.about-text {
+  font-size: .8rem;
+  font-family: Roboto, sans-serif;
+  max-width: 40em;
+
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* area - footer */
+.item-footer {
+  grid-area: footer;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: #B693FA solid 3px;
+
+}
+
+.footer-header {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+  color: #000;
+  border-bottom: 1px #000 solid;
+}
+
+.footer-action {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 60%;
+  text-transform: uppercase;
+  font-size: 3.8vw;
+  font-weight: 700;
+}
+
+.skype {
+  border: 1px solid #000;
+  padding: .9em;
+}
+
+.cv {
+  border: 1px solid #000;
+  padding: .9em;
+}
+
+.cv:hover {
+  background-color: #FDDDA0;
+}
+
+.skype:hover {
+  background-color: #FDDDA0;
+}
+
+.footer-action a:link {
+  color: #000;
+}
+
+.footer-action a:visited {
+  color: #000;
+}
+
+.footer-details {
+  margin: 2%;
+  font-size: .4rem;
+  color: #000;
+  text-align: center;
+}
+
+/*links*/
+
+a:link, a:visited {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* images */
+
+.self {
+  width: 10rem;
+}
+
+.image-proj {
+  width: auto;
+  margin: 2%;
+  height: 3.6rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px #46404E solid;
+  filter: grayscale(100%);
+}
+
+.image-proj:hover {
+  filter: none;
+}
